@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>个人学术简历 - 学术研究与个人发展</title>
+        <meta name="description" content="展示个人学术成就、科研竞赛、社会实践以及未来发展规划的个人网站" /> 
+
+        <!--Google fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Inconsolata:400,700">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="css/default.css" id="theme-color">
+        <style>
+            /* 时间轴样式 */
+            .timeline-steps {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .timeline-steps:before {
+                content: '';
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background-color: rgba(255, 255, 255, 0.4);
+                top: 20px;
+                left: 10%;
+                z-index: 0;
+            }
+
+            .timeline-step {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                margin: 0 2rem;
+                z-index: 1;
+            }
+
+            .timeline-step .inner-circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                position: relative;
+                transition: all 0.3s ease;
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            }
+
+            .timeline-step:hover .inner-circle {
+                transform: scale(1.2);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+
+            .timeline-content {
+                text-align: center;
+                width: 120px;
+            }
+
+            /* 卡片悬停效果 */
+            .card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+
+            /* 阶梯式布局样式 */
+            .steps-container {
+                position: relative;
+                padding: 20px;
+            }
+
+            .step-item {
+                display: flex;
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            .step-number {
+                font-size: 48px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.2);
+                margin-right: 20px;
+                line-height: 1;
+                min-width: 80px;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .step-content {
+                flex: 1;
+                position: relative;
+            }
+
+            .step-card {
+                background: rgba(255, 255, 255, 0.95);
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            .step-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .step-title {
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #f0f0f0;
+                padding-bottom: 10px;
+            }
+
+            .year-badge {
+                font-size: 14px;
+                background: #007bff;
+                color: white;
+                padding: 4px 12px;
+                border-radius: 20px;
+                margin-left: 10px;
+                font-weight: normal;
+            }
+
+            .detail-section {
+                margin-bottom: 20px;
+            }
+
+            .detail-section h6 {
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+
+            .detail-section h6 i {
+                margin-right: 8px;
+            }
+
+            .detail-section ul {
+                padding-left: 25px;
+                margin-bottom: 15px;
+            }
+
+            .detail-section ul li {
+                margin-bottom: 8px;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            /* 连接线 */
+            .step-item:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                left: 40px;
+                top: 100px;
+                bottom: -20px;
+                width: 2px;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            /* 响应式调整 */
+            @media (max-width: 768px) {
+                .step-number {
+                    font-size: 36px;
+                    min-width: 60px;
+                    margin-right: 15px;
+                }
+
+                .step-item:not(:last-child)::after {
+                    left: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target="#beleme-navbar" data-offset="0">
+
+        <!--hero header-->
+        <section class="bg-hero py-7 py-md-0" id="home" style="background-image: url(img/f1d760434016a8c1d8eae5cf09d870a.jpg); position: relative;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0);"></div>
+            <div class="container">
+                <div class="row vh-md-100">
+                    <div class="col-md-6 my-auto text-white text-left" style="margin-left: 8%;">
+                        <div style="margin-top: 8rem;">
+                            <h2 class="text-white display-4 mb-4" style="font-size: 2.5rem;">欢迎访问！</h2>
+                            <h1 class="display-3 mb-4" style="font-weight: 600; line-height: 1.2; font-size: 2.8rem; white-space: nowrap;">余昕晨的个人网站</h1>
+                            <p class="lead mb-5" style="font-size: 1.2rem; letter-spacing: 0.5px; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6;">
+                            Lofty ambitions take small steps—<br>my journey starts with lacing up<br>my boots and hitting the road.
+                            </p>
+                            <a href="#about" class="btn btn-primary btn-lg d-inline-flex align-items-center page-scroll" style="padding: 0.75rem 2rem; font-size: 1.1rem;">
+                                了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top sticky-navigation" id="beleme-navbar">
+            <a class="navbar-brand d-md-none" href="index.html">
+                Beleme
+            </a>
+            <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">个人简介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#resume">本人履历</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#grades">学习成绩</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#research">科研竞赛</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#student">学生活动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#practice">社会实践</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#future">未来规划</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--about section-->
+        <section class="py-7" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mx-auto text-center">
+                        <h2>个人简介</h2>
+                        <div class="divider bg-primary mx-auto"></div>
+                        <div class="text-muted mb-4" style="font-size: 0.95rem;">
+                            <span class="mx-2"><i class="fa fa-user"></i> 余昕晨</span>
+                            <span class="mx-2"><i class="fa fa-flag"></i> 团员</span>
+                            <span class="mx-2"><i class="fa fa-calendar"></i> 2006年5月</span>
+                            <br>
+                            <span class="mx-2"><i class="fa fa-graduation-cap"></i> 健行学院·人文社科</span>
+                            <span class="mx-2">→</span>
+                            <span class="mx-2"><i class="fa fa-bank"></i> 管理学院·财务管理2402</span>
+                        </div>
+                        <p class="lead mb-4">
+                            老师好~我是浙江工业大学健行学院2024级人文社科的余昕晨~大二即将进入财务管理专业。学习财务管理，是出于我对此专业由衷的热爱。在我看来，财务管理是打开商业世界的密钥，我希望通过这个专业，收获自己的专长技能，厘清商业世界的底层逻辑，接触更多的商业案例和实战经验。
+                        </p>
+                        <p class="text-muted mb-4">
+                            在校期间，我始终以认真的态度对待学业，目前绩点在健行学院人文社科大类排名第五，我将在大二期间继续持续提升绩点。同时，我也非常热爱英语学习，大一完成了四级考试（619分），积极参与各类口语实践。曾在浙江工业大学健行学院"Voice of Jianxing"英语演讲比赛中获得特等奖、在第18届中国日报社"21世纪杯"中学生英语演讲大会中获省一等奖。这些经历让我在沟通交流中更敢于表达、善于表达。
+                        </p>
+                        <p class="text-muted">
+                            学术探索方面，我于2025年参与大创赛创业训练项目，主持关于"大学生智能兼职平台"的开发，致力于突破传统兼职思维，发掘灵活就业蓝海市场，开创兼职经济新赛道；在全球机器人大赛Robocup France比赛中取得决赛银奖。这些科研实践让我逐渐掌握学术研究的基本方法，也意识到团队协作和创新思维的重要性！此外，我还获得过校新生奖学金、院级"优秀团干"等荣誉。未来希望能在导师的指导下，以更踏实的态度精进学业，在科研领域积累更多经验，不断提升综合能力！！！
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6 mx-auto text-center">
+                        <a href="#resume" class="btn btn-primary btn-lg page-scroll" style="border-radius: 25px; padding: 10px 30px; font-size: 1.1rem;">
+                            <i class="fa fa-arrow-down me-2"></i> 快来看看我的履历吧~
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--resume section-->
+        <section class="py-7 bg-primary" id="resume">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mx-auto text-center">
+                        <h2 class="text-white">本人履历</h2>
+                        <div class="divider bg-white mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-10 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="timeline px-sm-5">
+                                    <div class="root">
+                                        <div class="date">2024.09 &mdash; 至今</div>
+                                        <div class="dot"></div>
+                                        <div class="event">
+                                            <h5 class="mb-2">浙江工业大学</h5>
+                                            <div class="content mt-4 px-0">
+                                                <ul>
+                                                    <li>主修专业：财务管理</li>
+                                                    <li>辅修专业：计划辅修大数据/人工智能</li>
+                                                    <li>任职：人文社科班班长、院组织部负责人（大二）</li>
+                                                    <li>获得主要荣誉：新生奖学金、优秀团干</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="root">
+                                        <div class="date">2021.09 &mdash; 2024.06</div>
+                                        <div class="dot"></div>
+                                        <div class="event">
+                                            <h5 class="mb-2">浙江省衢州第二中学</h5>
+                                            <div class="content mt-4 px-0">
+                                                <ul>
+                                                    <li>高考：652分</li>
+                                                    <li>任职：班长</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="root">
+                                        <div class="date">2018.09 &mdash; 2021.06</div>
+                                        <div class="dot"></div>
+                                        <div class="event">
+                                            <h5 class="mb-2">衢州华茂外国语学校</h5>
+                                            <div class="content mt-4 px-0">
+                                                <ul>
+                                                    <li>中考：市第17名</li>
+                                                    <li>任职：班长</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--grades section-->
+        <section class="py-7" id="grades">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mx-auto text-center">
+                        <h2>学习成绩</h2>
+                        <div class="divider bg-primary mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">大一期间学习成绩（包含必修、选修、体育，不包含通识课）</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>课程代码</th>
+                                                <th>课程名称</th>
+                                                <th>课程性质</th>
+                                                <th>学分</th>
+                                                <th>绩点</th>
+                                                <th>任课教师</th>
+                                                <th>考核方式</th>
+                                                <th>成绩</th>
+                                                <th>学分绩点</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>G237016</td>
+                                                <td>"四史"教育</td>
+                                                <td>必修课</td>
+                                                <td>1.0</td>
+                                                <td>4.40</td>
+                                                <td>颜桂珍</td>
+                                                <td>考查</td>
+                                                <td>94</td>
+                                                <td>4.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G105143</td>
+                                                <td>会计学</td>
+                                                <td>必修课</td>
+                                                <td>3.0</td>
+                                                <td>4.40</td>
+                                                <td>林素燕;游夏蕾</td>
+                                                <td>考试</td>
+                                                <td>94</td>
+                                                <td>13.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G105093</td>
+                                                <td>公司理财A</td>
+                                                <td>必修课</td>
+                                                <td>3.0</td>
+                                                <td>4.10</td>
+                                                <td>安维东</td>
+                                                <td>考试</td>
+                                                <td>91</td>
+                                                <td>12.30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G105294</td>
+                                                <td>微观经济学A</td>
+                                                <td>必修课</td>
+                                                <td>3.0</td>
+                                                <td>4.00</td>
+                                                <td>陈国亮</td>
+                                                <td>考试</td>
+                                                <td>90</td>
+                                                <td>12.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G105511</td>
+                                                <td>社会科学中数据分析</td>
+                                                <td>选修课</td>
+                                                <td>2.0</td>
+                                                <td>4.40</td>
+                                                <td>胡林枫</td>
+                                                <td>考查</td>
+                                                <td>94</td>
+                                                <td>8.80</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G209038</td>
+                                                <td>通用学术英语（健）</td>
+                                                <td>必修课</td>
+                                                <td>4.0</td>
+                                                <td>4.00</td>
+                                                <td>无</td>
+                                                <td>免修</td>
+                                                <td>90</td>
+                                                <td>16.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G109212</td>
+                                                <td>英语口语（健行）</td>
+                                                <td>必修课</td>
+                                                <td>2.0</td>
+                                                <td>4.50</td>
+                                                <td>Craig Barker</td>
+                                                <td>考查</td>
+                                                <td>95</td>
+                                                <td>9.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G326027</td>
+                                                <td>人工智能技术（健）</td>
+                                                <td>选修课</td>
+                                                <td>2.0</td>
+                                                <td>3.60</td>
+                                                <td>党源杰</td>
+                                                <td>考查</td>
+                                                <td>86</td>
+                                                <td>7.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G127221</td>
+                                                <td>社会研究方法</td>
+                                                <td>选修课</td>
+                                                <td>3.0</td>
+                                                <td>3.90</td>
+                                                <td>陈中夫;傅衍</td>
+                                                <td>考查</td>
+                                                <td>89</td>
+                                                <td>11.70</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G209037</td>
+                                                <td>大学英语（健行）</td>
+                                                <td>必修课</td>
+                                                <td>4.0</td>
+                                                <td>4.00</td>
+                                                <td>许晓洁</td>
+                                                <td>考试</td>
+                                                <td>90</td>
+                                                <td>16.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G237002</td>
+                                                <td>中国近现代史纲要</td>
+                                                <td>必修课</td>
+                                                <td>2.0</td>
+                                                <td>3.70</td>
+                                                <td>李星然</td>
+                                                <td>考试</td>
+                                                <td>87</td>
+                                                <td>7.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G237019</td>
+                                                <td>思想道德与法治</td>
+                                                <td>必修课</td>
+                                                <td>3.0</td>
+                                                <td>4.20</td>
+                                                <td>张文卓</td>
+                                                <td>考试</td>
+                                                <td>92</td>
+                                                <td>12.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>J110010</td>
+                                                <td>高等数学（健行）</td>
+                                                <td>必修课</td>
+                                                <td>3.0</td>
+                                                <td>3.10</td>
+                                                <td>何敏勇</td>
+                                                <td>考试</td>
+                                                <td>81</td>
+                                                <td>9.30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>J110013</td>
+                                                <td>线性代数B（健行）</td>
+                                                <td>必修课</td>
+                                                <td>2.0</td>
+                                                <td>4.10</td>
+                                                <td>金建国</td>
+                                                <td>考试</td>
+                                                <td>91</td>
+                                                <td>8.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G227004</td>
+                                                <td>国家安全教育</td>
+                                                <td>必修课</td>
+                                                <td>1.0</td>
+                                                <td>4.30</td>
+                                                <td>顾容;蒋惠琴;闫丹</td>
+                                                <td>考查</td>
+                                                <td>93</td>
+                                                <td>4.30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>J110008</td>
+                                                <td>高等数学（健行）</td>
+                                                <td>必修课</td>
+                                                <td>5.0</td>
+                                                <td>3.50</td>
+                                                <td>马青</td>
+                                                <td>考试</td>
+                                                <td>85</td>
+                                                <td>17.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G226005</td>
+                                                <td>程序设计基础Python</td>
+                                                <td>必修课</td>
+                                                <td>4.0</td>
+                                                <td>3.90</td>
+                                                <td>龙胜春</td>
+                                                <td>考试</td>
+                                                <td>89</td>
+                                                <td>15.60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G207010</td>
+                                                <td>心理健康教育实践</td>
+                                                <td>必修课</td>
+                                                <td>1.0</td>
+                                                <td>4.50</td>
+                                                <td>楼群英;王玉慧</td>
+                                                <td>考查</td>
+                                                <td>95</td>
+                                                <td>4.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>G207007</td>
+                                                <td>心理健康与自我成长</td>
+                                                <td>必修课</td>
+                                                <td>1.0</td>
+                                                <td>4.70</td>
+                                                <td>楼群英</td>
+                                                <td>考试</td>
+                                                <td>97</td>
+                                                <td>4.70</td>
+                                            </tr>
+                                            <tr>
+                                                <td>413001</td>
+                                                <td>体育（第一学期）</td>
+                                                <td>体育课</td>
+                                                <td>1.0</td>
+                                                <td>4.00</td>
+                                                <td>渠扬</td>
+                                                <td>考试</td>
+                                                <td>90</td>
+                                                <td>4.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>413001</td>
+                                                <td>体育（第二学期）</td>
+                                                <td>体育课</td>
+                                                <td>1.0</td>
+                                                <td>4.20</td>
+                                                <td>渠扬</td>
+                                                <td>考试</td>
+                                                <td>92</td>
+                                                <td>4.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="9" style="text-align: right; font-weight: bold; background-color: #f8f9fa;">
+                                                    平均绩点：4.07（绩点之和/课程数）<br>
+                                                    平均学分绩点：3.98（学分绩点之和/总学分）
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--research section-->
+        <section class="py-7 bg-primary" id="research">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mx-auto text-center">
+                        <h2 class="text-white">科研竞赛</h2>
+                        <div class="divider bg-white mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-10 mx-auto">
+                        <div class="card bg-transparent border-light">
+                            <div class="card-body">
+                                <h3 class="text-white mb-4">科研经历</h3>
+                                <h4 class="text-white">大创赛项目</h4>
+                                <p style="color: #e6e6e6;" class="mb-4">作为负责人参与了"大创赛"。在国务院发布促进灵活就业的政策背景与当前大学生就业困难的现状下，我们团队推出了"智联职途——大学生灵活就业智能平台"。我们瞄准灵活就业的蓝海市场，鼓励大学生跳出兼职"做家教"的传统思维，为大学生提供种类更多、质量更高、适配性更强的兼职岗位，让大学生在兼职的同时实现能力的提升，帮助大学生实现职业技能前置化培养。</p>
+                                
+                                <h4 class="text-white">三创赛项目</h4>
+                                <p style="color: #e6e6e6;" class="mb-5">与学姐学长一起参加了"三创赛"，设计了global box跨境贸易平台。</p>
+
+                                <h3 class="text-white mb-4">竞赛经历</h3>
+                                <ul class="list-unstyled" style="color: #e6e6e6;">
+                                    <li class="mb-3">
+                                        <strong class="text-white">浙江工业大学健行学院"The Voice of Jianxing健行之声"英语演讲比赛</strong><br>
+                                        特等奖 (2025.05)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">浙江工业大学第一届"畅言杯"校园提案大赛</strong><br>
+                                        二等奖 (2024.12)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">浙江工业大学第一届模拟政协提案大赛</strong><br>
+                                        三等奖 (2024.12)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">全球机器人大赛 Robocup France</strong><br>
+                                        决赛银奖 (2023.04)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">全国中学生英语能力测评（NEPTS）</strong><br>
+                                        一等奖 (2022.12)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">全国第24届语文报杯征文比赛</strong><br>
+                                        银奖 (2022.06)
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="text-white">第18届中国日报社"21世纪杯"中学生英语演讲大会</strong><br>
+                                        一等奖 (2020.03)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学生活动-->
+        <section class="projects-section bg-light" id="student">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-12 mb-5">
+                        <div class="card py-4 h-100" style="background: rgb(0, 0, 0);">
+                            <div class="card-body">
+                                <h3 class="text-white mb-4 text-center">学生活动</h3>
+                                <div class="row g-0">
+                                    <!-- 左侧文字内容 -->
+                                    <div class="col-md-5 pe-md-4">
+                                        <ul class="list-unstyled text-white">
+                                            <li class="mb-3">
+                                                <strong class="text-white">2024年9月</strong><br>
+                                                作为新生代表发言
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2024年9月</strong><br>
+                                                担任人文社科班班长
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2024年9月</strong><br>
+                                                担任组织部干事
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2024年11月</strong><br>
+                                                主持团干培训活动
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2025年4月</strong><br>
+                                                团员评议为"优秀"
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2025年4月</strong><br>
+                                                被评为院"优秀团干"
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2025年5月</strong><br>
+                                                参加学院英语演讲比赛
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2025年5月</strong><br>
+                                                主持院第十三届学生代表大会
+                                            </li>
+                                            <li class="mb-3">
+                                                <strong class="text-white">2025年9月</strong><br>
+                                                担任组织部负责人
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- 右侧图片 -->
+                                    <div class="col-md-7">
+                                        <div class="row g-4">
+                                            <div class="col-6">
+                                                <img src="img/1.jpg" class="img-fluid rounded" alt="活动照片1" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="img/2.jpg" class="img-fluid rounded" alt="活动照片2" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="img/3.jpg" class="img-fluid rounded" alt="活动照片3" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="img/4.jpg" class="img-fluid rounded" alt="活动照片4" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="img/bb34e0904ae9517940af298aaa394c7.jpg" class="img-fluid rounded" alt="活动照片5" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <img src="img/5397b91ff4da3f501af9ada7f197a54.jpg" class="img-fluid rounded" alt="活动照片6" style="width: 100%; height: 240px; object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--practice section-->
+        <section class="py-7" id="practice">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mx-auto text-center">
+                        <h2>社会实践</h2>
+                        <div class="divider bg-primary mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <!-- 志愿服务类 -->
+                        <div class="card h-100">
+                            <div class="card-body p-3">
+                                <div class="text-center mb-3">
+                                    <div class="d-inline-block">
+                                        <div class="icon-box mb-2">
+                                            <div class="icon-box-inner small" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E); border-radius: 8px; padding: 8px;">
+                                                <span data-feather="heart" width="24" height="24" style="color: white;"></span>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-1 fw-bold" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">志愿服务类</h6>
+                                        <div class="small text-muted">Volunteer Service</div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled mb-0 small text-center">
+                                    <li class="mb-2">
+                                        <div><strong>浙工大志愿者之家</strong></div>
+                                        <div class="text-muted">截至2025年6月</div>
+                                        <div>累计志愿时长140.5小时</div>
+                                    </li>
+                                    <li>
+                                        <div><strong>2025年暑期志愿活动</strong></div>
+                                        <div class="text-muted">计划2025年7月</div>
+                                        <div>带领外国留学生来华研学</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <!-- 实习与实践类 -->
+                        <div class="card h-100">
+                            <div class="card-body p-3">
+                                <div class="text-center mb-3">
+                                    <div class="d-inline-block">
+                                        <div class="icon-box mb-2">
+                                            <div class="icon-box-inner small" style="background: linear-gradient(135deg, #4CAF50, #8BC34A); border-radius: 8px; padding: 8px;">
+                                                <span data-feather="briefcase" width="24" height="24" style="color: white;"></span>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-1 fw-bold" style="background: linear-gradient(135deg, #4CAF50, #8BC34A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">实习与实践类</h6>
+                                        <div class="small text-muted">Internship & Practice</div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled mb-0 small text-center">
+                                    <li>
+                                        <div><strong>杭州践行电子商务有限公司</strong></div>
+                                        <div class="text-muted">2024年11月3日起</div>
+                                        <div>完成为期一个月的实习，获实习证明</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <!-- 赛事与社会服务类 -->
+                        <div class="card h-100">
+                            <div class="card-body p-3">
+                                <div class="text-center mb-3">
+                                    <div class="d-inline-block">
+                                        <div class="icon-box mb-2">
+                                            <div class="icon-box-inner small" style="background: linear-gradient(135deg, #2196F3, #03A9F4); border-radius: 8px; padding: 8px;">
+                                                <span data-feather="award" width="24" height="24" style="color: white;"></span>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-1 fw-bold" style="background: linear-gradient(135deg, #2196F3, #03A9F4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">赛事与社会服务类</h6>
+                                        <div class="small text-muted">Competition & Service</div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled mb-0 small text-center">
+                                    <li class="mb-2">
+                                        <div><strong>第19届杭州亚运会</strong></div>
+                                        <div class="text-muted">2023年9月</div>
+                                        <div>担任学生记者</div>
+                                    </li>
+                                    <li>
+                                        <div><strong>2024西湖青芝坞隆冬跑山赛</strong></div>
+                                        <div class="text-muted">2024年12月</div>
+                                        <div>担任媒体工作</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <!-- 调研实践类 -->
+                        <div class="card h-100">
+                            <div class="card-body p-3">
+                                <div class="text-center mb-3">
+                                    <div class="d-inline-block">
+                                        <div class="icon-box mb-2">
+                                            <div class="icon-box-inner small" style="background: linear-gradient(135deg, #9C27B0, #BA68C8); border-radius: 8px; padding: 8px;">
+                                                <span data-feather="search" width="24" height="24" style="color: white;"></span>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-1 fw-bold" style="background: linear-gradient(135deg, #9C27B0, #BA68C8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">调研实践类</h6>
+                                        <div class="small text-muted">Research Practice</div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled mb-0 small text-center">
+                                    <li>
+                                        <div><strong>宁波山村调查实践</strong></div>
+                                        <div class="text-muted">2025年7月</div>
+                                        <div>计划前往开展实地调研</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--future section-->
+        <section class="py-7 bg-primary" id="future">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2 class="text-white">未来规划</h2>
+                        <div class="divider bg-white mx-auto"></div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="steps-container">
+                            <!-- 大二规划 -->
+                            <div class="step-item">
+                                <div class="step-number">01</div>
+                                <div class="step-content">
+                                    <div class="card step-card">
+                                        <div class="card-body">
+                                            <h4 class="step-title">大二规划 <span class="year-badge">2025-2026</span></h4>
+                                            <div class="step-details">
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-book"></i> 专业学习</h6>
+                                                    <ul>
+                                                        <li>深入学习专业核心课程，系统掌握财务核算、财务分析、成本控制等知识</li>
+                                                        <li>关注财经领域热点，培养财经敏感度</li>
+                                                        <li>英语六级争取考上600+</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-certificate"></i> 证书考取</h6>
+                                                    <ul>
+                                                        <li>备考并考取初级会计职称证书</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-briefcase"></i> 实践探索</h6>
+                                                    <ul>
+                                                        <li>寻找财务相关实习机会</li>
+                                                        <li>参加财务案例分析大赛等学科竞赛</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 大三规划 -->
+                            <div class="step-item">
+                                <div class="step-number">02</div>
+                                <div class="step-content">
+                                    <div class="card step-card">
+                                        <div class="card-body">
+                                            <h4 class="step-title">大三规划 <span class="year-badge">2026-2027</span></h4>
+                                            <div class="step-details">
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-graduation-cap"></i> 专业精进</h6>
+                                                    <ul>
+                                                        <li>学习高级财务课程，深入研究复杂财务问题</li>
+                                                        <li>选修相关交叉学科课程，拓宽知识面</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-trophy"></i> 证书进阶</h6>
+                                                    <ul>
+                                                        <li>备考注册会计师（CPA）部分科目</li>
+                                                        <li>备考ACCA或CMA，提升国际化专业素养</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-line-chart"></i> 实践深化</h6>
+                                                    <ul>
+                                                        <li>进入大型企业或会计师事务所实习</li>
+                                                        <li>参与核心财务工作，积累实践经验</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 大四规划 -->
+                            <div class="step-item">
+                                <div class="step-number">03</div>
+                                <div class="step-content">
+                                    <div class="card step-card">
+                                        <div class="card-body">
+                                            <h4 class="step-title">大四规划 <span class="year-badge">2027-2028</span></h4>
+                                            <div class="step-details">
+                                                <div class="detail-section">
+                                                    <h6><i class="fa fa-flag"></i> 毕业准备</h6>
+                                                    <ul>
+                                                        <li>认真完成毕业论文，结合专业知识和实际案例</li>
+                                                        <li>回顾总结大学四年的学习和实践经历</li>
+                                                        <li>明确自身优势和不足，制定长期职业发展规划</li>
+                                                        <li>为进入职场或继续深造做好充分准备</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer / contact-->
+        <footer class="py-6 bg-dark text-white" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-white">余昕晨</h5>
+                        <div class="divider divider-sm bg-white mt-3"></div>
+                        <p class="mt-4">
+                            持之以恒、创意多元。对学习科研充满热情，希望能在您的指导下不断进步！
+                        </p>
+                        <ul class="list-inline social social-sm social-rounded mt-4">
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-qq"></i></a>
+                                <span class="text-white ml-2">Orina: 3343485863</span>
+                            </li>
+                            <li class="list-inline-item ml-3">
+                                <a href=""><i class="fa fa-wechat"></i></a>
+                                <span class="text-white ml-2">Orapig: 18367058318</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ml-auto">
+                        <h5 class="text-white">Contact Information</h5>
+                        <div class="divider divider-sm bg-white mt-3"></div>
+                        <ul class="list-unstyled mt-4">
+                            <li class=" mb-2">
+                                <span class="mr-2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                18367058318
+                            </li>
+                            <li class=" mb-2">
+                                <span class="mr-2"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                3343485863@qq.com
+                            </li>
+                            <li class=" mb-2">
+                                <span class="mr-2"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                浙江工业大学朝晖校区 梦溪村
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="my-5"/>
+                <div class="row">
+                    <div class="col-12 text-muted text-center">
+                        欢迎您对余昕晨个人网页2025的指点
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--scroll to top-->
+        <div class="scroll-top">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+
+        <!-- theme switcher (FOR DEMO ONLY - REMOVE FROM PRODUCTION)-->
+        <div class="switcher-wrap">
+            <div class="switcher-trigger">
+                <span class="fa fa-gear"></span>
+            </div>
+            <div class="color-switcher">
+                <h6>Color Switcher</h6>
+                <ul class="mt-3 clearfix">
+                    <li class="bg-black active" data-color="default" title="Default Black"></li>
+                    <li class="bg-green" data-color="green" title="Green"></li>
+                    <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+                    <li class="bg-orange" data-color="orange" title="Orange"></li>
+                    <li class="bg-red" data-color="red" title="Red"></li>
+                    <li class="bg-blue" data-color="blue" title="Blue"></li>
+                    <li class="bg-teal" data-color="teal" title="Teal"></li>
+                    <li class="bg-cyan" data-color="cyan" title="Cyan"></li>
+                    <li class="bg-purple" data-color="purple" title="Purple"></li>
+                    <li class="bg-pink" data-color="pink" title="Pink"></li>
+                </ul>
+                <p>These are just demo colors. You can <b>easily</b> create your own color scheme.</p>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/Typist/1.2/typist.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+        <script src="js/feather.min.js"></script>
+        <script>
+            feather.replace()
+        </script>
+        <!-- 添加导航栏激活状态处理 -->
+        <script>
+            $(document).ready(function() {
+                // 处理导航栏点击
+                $('.nav-link').on('click', function() {
+                    $('.nav-link').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                // 处理滚动时的导航栏激活状态
+                $(window).on('scroll', function() {
+                    var scrollDistance = $(window).scrollTop();
+                    
+                    // 检查每个section
+                    $('section').each(function(i) {
+                        if ($(this).position().top <= scrollDistance + 100) {
+                            $('.nav-link.active').removeClass('active');
+                            $('.nav-link').eq(i).addClass('active');
+                        }
+                    });
+                }).scroll();
+            });
+        </script>
+    </body>
+</html>
